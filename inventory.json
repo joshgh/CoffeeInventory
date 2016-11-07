@@ -1,0 +1,74 @@
+{
+  "Roasted": [{
+    "Name": "Medium Sumatra",
+    "Weight": 20,
+    "greenUsed": "Sumatra"
+  },{
+    "Name": "Dark Columbia",
+    "Weight": 20,
+    "greenUsed": "Columbia"
+  },{
+    "Name": "Medium Kona",
+    "Weight": 20,
+    "greenUsed": "Kona"
+  },{
+    "Name": "French Roast",
+    "Weight": 20,
+    "greenUsed": "Columbia"
+  }],
+  "Green": [{
+    "Name": "Sumatra",
+    "Weight": 50,
+    "Description": "Mandheling is named after the Mandailing people located in North Sumatra, Indonesia. The name is the result of a misunderstanding by the first foreign purchaser of the variety, and no coffee is actually produced in the 'Mandailing region'. Lintong on the other hand, is named after the Lintong district, also located in North Sumatra. This is not a specific cultivar, but rather a region with a specific processing style."
+    },{
+    "Name": "Columbia",
+    "Weight": 50,
+    "Description": "Coffee was first introduced to the country of Colombia in the early 1800s. Today Maragogipe, Caturra, Typica|Typica and Bourbon cultivars are grown. When Colombian coffee is freshly roasted it has a bright acidity, is heavy in body and is intensely aromatic. Colombia accounts for about 12% of the coffee market (by value) in the world, third in volume after Vietnam and Brazil."
+    },{
+    "Name": "Ethiopian",
+    "Weight": 50,
+    "Description": "From the Yirgachefe district in the Gedeo Zone of the Southern Nations, Nationalities, and People's Region of Ethiopia. All three Ethiopian varieties are trademarked names with the rights owned by Ethiopia."
+    },{
+    "Name": "Kona",
+    "Weight": 50,
+    "Description": "Grown on the slopes of Hualalai and Mauna Loa in the Kona District on the Big Island of Hawaii. Coffee was first introduced to the Islands by Chief Boki, the Governor of Oahu, in 1825."
+    },{
+    "Name": "Guatemalan",
+    "Weight": 50,
+    "Description": "Grown in the rolling hills of Guatemala, this variety has strong earthy tones with an oak finish. It is best as a dark roast and blends well with beans grown in high elevations."
+  }],
+  "Blends": [{
+    "Name": "Super Blend",
+    "Recipe": [{
+      "Name": "Medium Sumatra",
+      "Percent": 0.25
+    },{
+      "Name": "Dark Columbia",
+      "Percent": 0.25
+    },{
+      "Name": "Medium Kona",
+      "Percent": 0.25
+    },{
+      "Name": "French Roast",
+      "Percent": 0.25
+      }],
+    "Description": "It's a blend of everything"
+  },{
+    "Name": "Josh's Blend",
+    "Recipe": [{
+      "Name": "Dark Columbia",
+      "Percent": 0.5
+    },{
+      "Name": "Medium Kona",
+      "Percent": 0.5
+      }],
+    "Description": "Josh's favorite blend. It has a sweet start and ends with a bold refreshing blast of flavor."
+  },{
+    "Name": "Chance's Blend",
+    "Recipe": [{
+      "Name": "French Roast",
+      "Percent": 1.0
+      }],
+    "Description": "A dark French Roast of Columbian coffee. Has a smooth mouth feel and bold taste."
+  }]
+}
