@@ -42,6 +42,7 @@
     "ember-truth-helpers": "1.2.0",
     "ember-welcome-page": "^1.0.3",
     "emberfire": "2.0.4",
+    "emberx-select": "2.2.2",
     "loader.js": "^4.0.10"
   }
 }

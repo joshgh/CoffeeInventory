@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.order-button {
+  margin-top: 20px;
+}
+
+label {
+  margin-top: 15px;
+}
+
 footer {
   text-align: center;
 }

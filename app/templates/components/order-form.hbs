@@ -1,9 +1,15 @@
-<div class="form-group">
-  <div class="form-control">
-    <select onchange={{action 'selectBlend' value='target.value'}}>
-      {{#each model as |blendChoice|}}
-        <option value={{blend}} selected={{eq blend blendChoice}}>{{blendChoice}}</option>
-      {{/each}}
-    </select>
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="blendChoice">Select Your Blend:</label>
+        <br>
+
+        <br>
+        <label for="quantity">Enter the Quantity:</label>
+        {{input type='number' class="form-control" value=quantity id="quantity"}}
+        <button class="btn btn-success order-button" {{action 'placeOrder'}}>Place Order</button>
+      </div>
+    </div>
   </div>
-</div>
+</form>
