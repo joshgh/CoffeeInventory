@@ -1,5 +1,5 @@
 {
-  "Roasted": [{
+  "Roasteds": [{
     "Name": "Medium Sumatra",
     "Weight": 20,
     "greenUsed": "Sumatra"
@@ -16,7 +16,7 @@
     "Weight": 20,
     "greenUsed": "Columbia"
   }],
-  "Green": [{
+  "Greens": [{
     "Name": "Sumatra",
     "Weight": 50,
     "Description": "Mandheling is named after the Mandailing people located in North Sumatra, Indonesia. The name is the result of a misunderstanding by the first foreign purchaser of the variety, and no coffee is actually produced in the 'Mandailing region'. Lintong on the other hand, is named after the Lintong district, also located in North Sumatra. This is not a specific cultivar, but rather a region with a specific processing style."
