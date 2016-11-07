@@ -15,6 +15,13 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+
+    },
+    firebase: {
+      apiKey: "AIzaSyA8OTVa_DW4UWc4diHMmzBxd76UNWpUecc",
+      authDomain: "coffee-inventory.firebaseapp.com",
+      databaseURL: "https://coffee-inventory.firebaseio.com",
+      storageBucket: "coffee-inventory.appspot.com"
     },
 
     APP: {
