@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   store: Ember.inject.service(),
-  model(){
-    console.log(this.get('store'));
-    return this.get('store').query('green');
-  }
+  greens: [],
+  init() {
+    let _this = this;
+    this._super(this.get('store').findAll('green').then(function(response) {
+      _this.set('greens', response);
+    }));
+  },
 });
