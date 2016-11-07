@@ -1,0 +1,13 @@
+<div class="purchase-green container">
+  <form>
+    <label for="bean-id">Desired Bean:</label>
+    <select value=selectedBean id="bean-id" onchange={{action 'selectBean' value='target.value'}}>
+      {{#each greens as |green|}}
+        <option value={{green.id}}>{{green.name}}</option>
+      {{/each}}
+    </select>
+    <label for="order-quantity">Amount</label>
+    {{input id="order-quantity" value=orderQuantity type="number" step="1"}}
+    <button {{action "placeOrder"}}>Place Order</button>
+  </form>
+</div>
