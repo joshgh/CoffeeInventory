@@ -1,0 +1,9 @@
+<div class="container">
+  {{#each roasteds as |roasted|}}
+    <h3>{{roasted.name}}</h3>
+    <ul>
+      <li>Kg left: {{roasted.weight}} Kg</li>
+      <li>Bean used: {{roasted.greenUsed}}</li>
+    </ul>
+  {{/each}}
+</div>

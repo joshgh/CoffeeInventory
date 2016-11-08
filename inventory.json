@@ -70,5 +70,21 @@
       "percent": 1.0
       }],
     "description": "A dark French Roast of Columbian coffee. Has a smooth mouth feel and bold taste."
-  }]
+  }],
+  "orders": [{
+      "blendID": 1,
+      "weight": 5,
+      "name": "Mary",
+      "fulfilled": false
+    }, {
+      "blendID": 2,
+      "weight": 1,
+      "name": "Joe",
+      "fulfilled": false
+    },{
+      "blendID": 0,
+      "weight": 10,
+      "name": "James",
+      "fulfilled": false
+    }]
 }

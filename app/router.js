@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('admin');
   this.route('about');
   this.route('contact');
+  this.route('orders');
 });
 
 export default Router;
