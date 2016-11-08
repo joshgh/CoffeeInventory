@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  selectedBean: 0,
+  selectedBean: null,
   selectedRoast: "light",
   formIsShowing: false,
   actions: {
@@ -16,13 +16,12 @@ export default Ember.Component.extend({
     },
     createRoast() {
       var params = {
-        name: this.get('roastName'),
+        name: this.get('selectedBean').get('name') + " " + this.get('selectedRoast'),
         weight: 0,
-        greenID: this.get('selectedBean'),
+        greenID: this.get('selectedBean').get('id'),
         roastLevel: this.get('selectedRoast'),
-        greenUsed: ""
+        greenUsed: this.get('selectedBean').get('name')
       };
-      this.set('roastName', "");
       this.sendAction('createRoast', params);
     }
   }
