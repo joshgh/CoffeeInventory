@@ -26,10 +26,24 @@ export default Ember.Route.extend({
       });
     },
     orderBlend(params){
-      this.store.findRecord('blend', params.id
-    ).then(function(response) {
-      console.log(response);
-    })
+        var _this = this;
+        this.store.findRecord('blend', params.id
+        ).then(function(response){
+          var blendQuantity = params.quantity;
+          var recipeArray = response.data.recipe;
+
+          for (var i = 0; i < recipeArray.length; i++) {
+            var queryLog = _this.store.query('roasted', {
+              orderBy: recipeArray[i].name
+            }).then(function(response){
+              console.log(response.content[0]._data.weight);
+              var responseArray = response.content
+              for (var j = 0; j < responseArray.length; j++) {
+
+              }
+            })
+          }
+        })
+      },
     }
-  }
 });
