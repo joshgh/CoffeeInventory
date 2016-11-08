@@ -24,6 +24,12 @@ export default Ember.Route.extend({
       }).finally(function(){
         console.log("promise resolved");
       });
+    },
+    orderBlend(params){
+      this.store.findRecord('blend', params.id
+    ).then(function(response) {
+      console.log(response);
+    })
     }
   }
 });

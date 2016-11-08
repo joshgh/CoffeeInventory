@@ -1,20 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  blend: null,
+  selectedBlend: 0,
 
   actions: {
-    selectBlend() {
-      this.set('blend', event.target.value);
-      console.log(this.get('blend'));
+    selectBlend(blend) {
+      this.set('selectedBlend', blend);
     },
 
-    placeOrder() {
+    orderBlend() {
       var params = {
-        name: this.get('blendChoice.name'),
+        id: this.get('selectedBlend'),
         quantity: this.get('quantity')
       };
-      this.sendAction('placeOrder', params);
+      this.sendAction('orderBlend', params);
     },
   }
 });

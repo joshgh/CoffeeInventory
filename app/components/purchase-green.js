@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       var params= {
         id: this.get('selectedBean'),
         quantity: this.get('orderQuantity')
-      }
+      };
       this.sendAction('placeOrder', params);
     }
   }
