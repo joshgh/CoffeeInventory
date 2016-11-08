@@ -4,54 +4,55 @@
   <label for="blend-description">Description:</label>
   {{input id="blend-description" value=blendDescription}}
 
-  <label for="component1">Desired Roast:</label>
-  <select value=component1 id="component1" onchange={{action 'selectRoast1' value='target.value'}}>
+  {{#x-select action="selectRoast1" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent1">Decimal Fraction:</label>
   {{input value=percent1 id="percent1"}}
-  <label for="component2">Desired Roast:</label>
-  <select value=component2 id="component2" onchange={{action 'selectRoast2' value='target.value'}}>
+
+  {{#x-select action="selectRoast2" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent2">Decimal Fraction:</label>
   {{input value=percent2 id="percent2"}}
-  <label for="component3">Desired Roast:</label>
-  <select value=component3 id="component3" onchange={{action 'selectRoast3' value='target.value'}}>
+
+  {{#x-select action="selectRoast3" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent3">Decimal Fraction:</label>
   {{input value=percent3 id="percent3"}}
-  <label for="component4">Desired Roast:</label>
-  <select value=component4 id="component4" onchange={{action 'selectRoast4' value='target.value'}}>
+
+  {{#x-select action="selectRoast4" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent4">Decimal Fraction:</label>
   {{input value=percent4 id="percent4"}}
-  <label for="component5">Desired Roast:</label>
-  <select value=component5 id="component5" onchange={{action 'selectRoast5' value='target.value'}}>
+
+  {{#x-select action="selectRoast5" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent5">Decimal Fraction:</label>
   {{input value=percent5 id="percent5"}}
-  <label for="component6">Desired Roast:</label>
-  <select value=component6 id="component6" onchange={{action 'selectRoast6' value='target.value'}}>
+
+  {{#x-select action="selectRoast6" as |xs|}}
     {{#each roasteds as |roast|}}
-      <option value={{roast.id}}>{{roast.name}}</option>
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
     {{/each}}
-  </select>
+  {{/x-select}}
   <label for="percent6">Decimal Fraction:</label>
   {{input value=percent6 id="percent6"}}
+
+
 
   <button {{action "saveBlend"}}>Save</button>
 

@@ -8,8 +8,11 @@ export default Ember.Component.extend({
   component5: null,
   component6: null,
   actions: {
-    selectRoast1(component) {
-      this.set('component1', component);
+    selectRoast1(value, event) {
+      console.log(event);
+      console.log(value.get('name'));
+      this.set('component1', value);
+      console.log(this.get('component1').get('name'));
     },
     selectRoast2(component) {
       this.set('component2', component);
@@ -31,9 +34,10 @@ export default Ember.Component.extend({
       for (let i = 1; i <= 6; i++) {
         if (this.get("percent" + i) > 0) {
           var component = {
-            roastID: this.get("component" + i),
+            roastID: this.get("component" + i).get('id'),
+            name: this.get("component" + i).get('name'),
             percent: parseFloat(this.get("percent" + i))
-          }
+          };
           components.push(component);
         }
       }
@@ -41,7 +45,7 @@ export default Ember.Component.extend({
         description: this.get('blendDescription'),
         name: this.get('blendName'),
         recipe: components
-      }
+      };
       this.sendAction('saveBlend', params);
     }
   }
