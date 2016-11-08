@@ -29,7 +29,7 @@ export default Ember.Route.extend({
       this.store.findRecord('blend', params.id
     ).then(function(response) {
       console.log(response);
-    })
+    });
     }
   }
 });

@@ -1,0 +1,5 @@
+{{new-roast greens=model.greens createRoast="createRoast"}}
+
+{{#each model.roasteds as |roast|}}
+  <p>{{roast.name}} - {{roast.weight}}</p>
+{{/each}}
