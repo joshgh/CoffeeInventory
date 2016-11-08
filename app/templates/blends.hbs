@@ -1,0 +1,5 @@
+{{#each model.blends as |blend|}}
+  {{blend-display-tile blend=blend}}
+{{/each}}
+
+{{new-blend roasteds=model.roasteds saveBlend="saveBlend"}}

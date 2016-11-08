@@ -24,3 +24,9 @@ label {
 footer {
   text-align: center;
 }
+
+form {
+  label, select, input {
+    display: block;
+  }
+}

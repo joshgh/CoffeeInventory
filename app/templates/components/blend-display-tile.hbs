@@ -1,0 +1,8 @@
+<p>{{blend.name}}</p>
+<p>{{blend.description}}</p>
+<p>Ingredients</p>
+<ul>
+  {{#each blend.recipe as |roast|}}
+    <li>{{roast.name}} - {{roast.percent}}</li>
+  {{/each}}
+</ul>
