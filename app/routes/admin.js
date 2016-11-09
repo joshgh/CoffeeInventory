@@ -46,5 +46,10 @@ export default Ember.Route.extend({
 
         })
       },
+
+      createOrder(params) {
+        var newOrder = this.store.createRecord('order', params);
+        newOrder.save();
+      }
     }
 });
