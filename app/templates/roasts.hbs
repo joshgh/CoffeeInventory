@@ -1,7 +1,28 @@
-{{new-roast greens=model.greens createRoast="createRoast"}}
-
-{{#each model.roasteds as |roast|}}
-  <p>{{roast.name}} - {{roast.weight}}</p>
-{{/each}}
-
-{{roast-beans roasteds=model.roasteds roastBeans="roastBeans"}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      {{new-roast greens=model.greens createRoast="createRoast"}}
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4 centeredFields boldList">
+      <h1>Our Current Selection Of Roasts:</h1>
+      <hr>
+      <div class="col-md-8">
+        {{#each model.roasteds as |roast|}}
+          <p>{{roast.name}}</p>
+        {{/each}}
+      </div>
+      <div class="col-md-4">
+        {{#each model.roasteds as |roast|}}
+          <p>{{roast.weight}}</p>
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-3">
+      {{roast-beans roasteds=model.roasteds roastBeans="roastBeans"}}
+    </div>
+  </div>
+</div>

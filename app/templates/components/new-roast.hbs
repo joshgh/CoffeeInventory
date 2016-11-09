@@ -1,20 +1,21 @@
 {{#if formIsShowing}}
-  <form>
-    <label for="green-id">Desired Source Bean:</label>
-    {{#x-select action="selectBean" as |xs|}}
+  <form class="form-group">
+    <h2 for="green-id">Desired Source Bean:</h2>
+    {{#x-select class="form-control" action="selectBean" as |xs|}}
       {{#each greens as |green|}}
         {{#xs.option value=green}}{{green.name}}{{/xs.option}}
       {{/each}}
     {{/x-select}}
-    <label for="roast-level">Roast Level</label>
-    <select value=selectedRoast id="roast-level" onchange={{action 'selectRoast' value='target.value'}}>
+    <h2 for="roast-level">Roast Level</h2>
+    <select class="form-control" value=selectedRoast id="roast-level" onchange={{action 'selectRoast' value='target.value'}}>
       <option value="light">Light</option>
       <option value="medium">Medium</option>
       <option value="dark">Dark</option>
       <option value="french">French</option>
     </select>
-    <button {{action "createRoast"}}>Create Roast</button>
+    <br>
+    <button class="btn btn-success btn-xl" {{action "createRoast"}}>Create Roast</button>
   </form>
 {{else}}
-  <button {{action "showForm"}}>Create New Roast</button>
+  <button class="btn btn-danger btn-xl"{{action "showForm"}}>Create New Roast</button>
 {{/if}}

@@ -1,7 +1,10 @@
-<h3>Roast Some Beans</h3>
-{{#x-select action="pickToRoast" as |xs|}}
-  {{#each roasteds as |roasted|}}
-    {{#xs.option value=roasted}}{{roasted.name}}{{/xs.option}}
-  {{/each}}
-{{/x-select}}
-<button {{action "roastBeans"}}>ROAST!</button>
+<h1>Roast Some Beans</h1>
+<form class="form-group" action="index.html" method="post">
+  {{#x-select class="form-control" action="pickToRoast" as |xs|}}
+    {{#each roasteds as |roasted|}}
+      {{#xs.option value=roasted}}{{roasted.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+</form>
+
+<button class="btn btn-info btn-xl"{{action "roastBeans"}}>ROAST!</button>
