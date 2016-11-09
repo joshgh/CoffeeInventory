@@ -3,3 +3,5 @@
 {{#each model.roasteds as |roast|}}
   <p>{{roast.name}} - {{roast.weight}}</p>
 {{/each}}
+
+{{roast-beans roasteds=model.roasteds roastBeans="roastBeans"}}

@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     },
     createRoast() {
       var params = {
-        name: this.get('selectedBean').get('name') + " " + this.get('selectedRoast'),
+        name:  this.get('selectedRoast') + " " + this.get('selectedBean').get('name'),
         weight: 0,
         greenID: this.get('selectedBean').get('id'),
         roastLevel: this.get('selectedRoast'),

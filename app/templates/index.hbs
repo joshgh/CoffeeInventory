@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4">
+        <h1 class="centeredFields">Log In</h1>
+        <label for="logIn">Enter Username:</label>
+        {{input type='string' class="form-control"}}
+        <br>
+        <label for="logIn">Enter Password:</label>
+        {{input type='string' class="form-control"}}
+        {{#link-to 'admin'}}<button class="btn btn-success order-button" {{action 'goToAdmin'}}>Enter Admin Area</button>{{/link-to}}
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+</form>

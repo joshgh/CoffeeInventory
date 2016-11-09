@@ -1,5 +1,13 @@
-{{#each model.blends as |blend|}}
-  {{blend-display-tile blend=blend}}
-{{/each}}
-
-{{new-blend roasteds=model.roasteds saveBlend="saveBlend"}}
+<div class="container">
+  <div class="row centerFields">
+    <div class="col-md-6 centerFields">
+      {{#each model.blends as |blend|}}
+        {{blend-display-tile blend=blend}}
+      {{/each}}
+    </div>
+    <div class="col-md-6 centeredFields">
+      <h1>Create a New Blend!</h1>
+      {{new-blend roasteds=model.roasteds saveBlend="saveBlend"}}
+    </div>
+  </div>
+</div>

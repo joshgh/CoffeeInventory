@@ -1,10 +1,10 @@
+<h1>Place an Order!</h1>
 <form>
   <div class="form-group">
     <div class="row">
       <div class="col-sm-6">
         <label for="blendChoice">Select Your Blend:</label>
-        <br>
-        <select onchange={{action 'selectBlend' value='target.value'}}>
+        <select class="form-control" onchange={{action 'selectBlend' value='target.value'}}>
           {{#each blends as |blendChoice|}}
             <option value={{blendChoice.id}}>{{blendChoice.name}}</option>
           {{/each}}
