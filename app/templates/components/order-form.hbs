@@ -1,10 +1,11 @@
+<h1>Place an Order!</h1>
 <form>
   <div class="form-group">
     <div class="row">
       <div class="col-sm-6">
         <label for="blendChoice">Select Your Blend:</label>
         <br>
-        {{#x-select id=blendChoice action='selectBlend'}}  
+        {{#x-select id=blendChoice action='selectBlend'}}
           {{#each blends as |blendChoice|}}
             {{#x-option value=blendChoice}}
             {{blendChoice.name}}

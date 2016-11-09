@@ -1,0 +1,7 @@
+<h3>Roast Some Beans</h3>
+{{#x-select action="pickToRoast" as |xs|}}
+  {{#each roasteds as |roasted|}}
+    {{#xs.option value=roasted}}{{roasted.name}}{{/xs.option}}
+  {{/each}}
+{{/x-select}}
+<button {{action "roastBeans"}}>ROAST!</button>

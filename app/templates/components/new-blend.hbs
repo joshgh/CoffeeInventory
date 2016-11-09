@@ -1,0 +1,67 @@
+<form class="form-group">
+  <label for="blend-name">Name:</label>
+  {{input class="form-control" id="blend-name" value=blendName}}
+  <label for="blend-description">Description:</label>
+  {{input class="form-control" id="blend-description" value=blendDescription}}
+  <hr>
+  <h3>Blend Recipe:</h3>
+  <h4>~First Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast1" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent1">Decimal Fraction:</label>
+  {{input class="form-control" value=percent1 id="percent1"}}
+  <br>
+  <h4>~Second Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast2" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent2">Decimal Fraction:</label>
+  {{input class="form-control" value=percent2 id="percent2"}}
+  <br>
+  <h4>~Third Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast3" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent3">Decimal Fraction:</label>
+  {{input class="form-control" value=percent3 id="percent3"}}
+  <br>
+  <h4>~Fourth Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast4" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent4">Decimal Fraction:</label>
+  {{input class="form-control" value=percent4 id="percent4"}}
+  <br>
+  <h4>Fifth Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast5" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent5">Decimal Fraction:</label>
+  {{input class="form-control" value=percent5 id="percent5"}}
+  <br>
+  <h4>Sixth Roast:</h4>
+  {{#x-select class="form-control" action="selectRoast6" as |xs|}}
+    {{#each roasteds as |roast|}}
+      {{#xs.option value=roast}}{{roast.name}}{{/xs.option}}
+    {{/each}}
+  {{/x-select}}
+  <label for="percent6">Decimal Fraction:</label>
+  {{input class="form-control" value=percent6 id="percent6"}}
+
+
+
+  <button class="btn btn-success btn-lg" {{action "saveBlend"}}>Save</button>
+
+
+</form>

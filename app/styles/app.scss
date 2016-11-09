@@ -1,9 +1,44 @@
 .jumbotron {
   text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-color: transparent;
   img {
-    width: 12em;
+    width: 17em;
   }
+}
+
+h1 {
+
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+}
+
+h4 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.centeredFields {
+  text-align: center;
+}
+
+.boldList{
+  font-family: 'Metrophobic', sans-serif;
+  font-size: 1.5em;
+}
+
+body {
+  background-color: #eda450;
 }
 
 #logo {
@@ -23,4 +58,10 @@ label {
 
 footer {
   text-align: center;
+}
+
+form {
+  label, select, input {
+    display: block;
+  }
 }
