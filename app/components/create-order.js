@@ -16,6 +16,8 @@ export default Ember.Component.extend({
         fulfilled: false,
         customerName: this.get('customerName')
       };
+      this.set('quantity', 0);
+      this.set('customerName', "");
       this.sendAction('createOrder', params);
     },
   }
