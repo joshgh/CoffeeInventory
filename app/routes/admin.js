@@ -14,10 +14,7 @@ export default Ember.Route.extend({
     placeOrder(params){
       //Order More Green Beans!
       this.store.findRecord('green', params.id
-        // orderBy: 'name',
-        // equalTo: params.name
       ).then(function(response) {
-        console.log(response);
         let currentWeight = response.get('weight');
         let newWeight = currentWeight + (params.quantity * 50);
         response.set('weight', newWeight);
@@ -33,7 +30,7 @@ export default Ember.Route.extend({
       var _this = this;
       var blendQuantity = params.quantity;
       var blendRecipeArray = params.blendObject.data.recipe;
-          this.store.query('roasted', {
+      this.store.query('roasted', {
             orderBy: 'name'
         }).then(function(response){
           _this.set('roastedOrderArray', []);
@@ -65,21 +62,17 @@ export default Ember.Route.extend({
         var paramsCustomerName = params.orderObject.data.customerName;
         var paramsFulfilled= params.orderObject.data.fulfilled;
         var _this = this;
-
-        // this.store.findRecord('roasted', )
         this.store.findRecord('blend', paramBlendID
       ).then(function(response){
         response.get('recipe').forEach(function(ingredient){
           var ingredientPercent = ingredient.percent;
-          console.log(ingredientPercent);
           _this.store.findRecord('roasted', ingredient.roastID
         ).then(function(response){
           response.set('weight', response.get('weight') - (paramsWeight * ingredientPercent));
           response.save();
-          console.log(response.get('weight'));
+          })
         })
         })
-      })
-      }
+      },
     }
 });
