@@ -12,6 +12,7 @@ export default Ember.Route.extend({
   },
   actions: {
     placeOrder(params){
+      //Order More Green Beans!
       this.store.findRecord('green', params.id
         // orderBy: 'name',
         // equalTo: params.name
@@ -28,9 +29,9 @@ export default Ember.Route.extend({
       });
     },
     orderBlend(params){
+      //Roast Inventory Checker
       var _this = this;
       var blendQuantity = params.quantity;
-      var blendName = params.blendObject.data.name;
       var blendRecipeArray = params.blendObject.data.recipe;
           this.store.query('roasted', {
             orderBy: 'name'
@@ -51,10 +52,34 @@ export default Ember.Route.extend({
           }
         })
       },
-
       createOrder(params) {
+        //Create an Order!
         var newOrder = this.store.createRecord('order', params);
         newOrder.save();
+      },
+      fulfillOrder(params) {
+        //Order Fulfillment
+        var paramBlendID = params.orderObject.data.blendID;
+        var paramBlendName = params.orderObject.data.blendName;
+        var paramsWeight = params.orderObject.data.weight;
+        var paramsCustomerName = params.orderObject.data.customerName;
+        var paramsFulfilled= params.orderObject.data.fulfilled;
+        var _this = this;
+
+        // this.store.findRecord('roasted', )
+        this.store.findRecord('blend', paramBlendID
+      ).then(function(response){
+        response.get('recipe').forEach(function(ingredient){
+          var ingredientPercent = ingredient.percent;
+          console.log(ingredientPercent);
+          _this.store.findRecord('roasted', ingredient.roastID
+        ).then(function(response){
+          response.set('weight', response.get('weight') - (paramsWeight * ingredientPercent));
+          response.save();
+          console.log(response.get('weight'));
+        })
+        })
+      })
       }
     }
 });

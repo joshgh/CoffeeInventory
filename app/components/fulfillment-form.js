@@ -6,8 +6,15 @@ export default Ember.Component.extend({
   actions: {
     selectOrder(order) {
       this.set('selectedOrder', order);
-      console.log(this.get('selectOrder'))
     },
+
+    fulfillOrder() {
+      var params = {
+        orderObject: this.get('selectedOrder')
+      };
+      this.sendAction('fulfillOrder', params);
+    },
+
 
   }
 
