@@ -1,19 +1,17 @@
-<h1>Place an Order!</h1>
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-6">
-        <label for="blendChoice">Select Your Blend:</label>
-        <select class="form-control" onchange={{action 'selectBlend' value='target.value'}}>
-          {{#each blends as |blendChoice|}}
-            <option value={{blendChoice.id}}>{{blendChoice.name}}</option>
-          {{/each}}
-        </select>
-        <br>
-        <label for="quantity">Enter the Quantity:</label>
-        {{input type='number' class="form-control" value=quantity id="quantity"}}
-        <button class="btn btn-success order-button" {{action 'orderBlend'}}>Place Order</button>
-      </div>
-    </div>
-  </div>
-</form>
+<h1>Roast Inventory Checker</h1>
+<div>
+  <form class="form-group">
+    <label for="blendChoice">Select Your Blend:</label>
+    {{#x-select class='form-control' id=blendChoice action='selectBlend'}}
+      {{#each blends as |blendChoice|}}
+        {{#x-option value=blendChoice}}
+        {{blendChoice.name}}
+        {{/x-option}}
+      {{/each}}
+    {{/x-select}}
+    <br>
+    <label for="quantity">Enter the Weight (kg):</label>
+    {{input type='number' class="form-control" value=quantity id="quantity"}}
+    <button class="btn btn-success order-button" {{action 'orderBlend'}}>Check</button>
+  </form>
+</div>

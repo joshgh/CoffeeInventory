@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  selectedBlend: 0,
+  selectedBlend: null,
 
   actions: {
     selectBlend(blend) {
@@ -10,7 +10,7 @@ export default Ember.Component.extend({
 
     orderBlend() {
       var params = {
-        id: this.get('selectedBlend'),
+        blendObject: this.get('selectedBlend'),
         quantity: this.get('quantity')
       };
       this.sendAction('orderBlend', params);

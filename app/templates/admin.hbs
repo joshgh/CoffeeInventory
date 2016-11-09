@@ -1,14 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <h1>Green Coffee Inventory:</h1>
-      {{green-inventory-list greens=model.greens}}
-
-      {{#link-to 'blends'}}<h1>Create A New Blend Here!</h1>{{/link-to}}
-    </div>
-    <div class="col-md-3">
-      <h1>Roasted Coffee Inventory:</h1>
-      {{roasted-inventory-list roasteds=model.roasteds}}
+      {{create-order blends=model.blends createOrder='createOrder'}}
     </div>
     <div class="col-md-3">
       {{order-form blends=model.blends orderBlend='orderBlend'}}
@@ -16,6 +9,9 @@
     <div class="col-md-3 form-group">
       <h1>Order More Green Beans!</h1>
       {{purchase-green greens=model.greens placeOrder="placeOrder"}}
+    </div>
+    <div class="col-md-3 form-group">
+      {{fulfillment-form orders=model.orders fulfillOrder = 'fulfillOrder'}}
     </div>
   </div>
 </div>
