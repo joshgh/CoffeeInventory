@@ -1,4 +1,4 @@
-<h1>Place an Order!</h1>
+<h1>Roast Inventory Checker</h1>
 <form>
   <div class="form-group">
     <div class="row">
@@ -13,9 +13,9 @@
           {{/each}}
         {{/x-select}}
         <br>
-        <label for="quantity">Enter the Quantity:</label>
+        <label for="quantity">Enter the Weight (kg):</label>
         {{input type='number' class="form-control" value=quantity id="quantity"}}
-        <button class="btn btn-success order-button" {{action 'orderBlend'}}>Place Order</button>
+        <button class="btn btn-success order-button" {{action 'orderBlend'}}>Check</button>
       </div>
     </div>
   </div>
