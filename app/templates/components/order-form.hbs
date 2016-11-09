@@ -4,11 +4,13 @@
       <div class="col-sm-6">
         <label for="blendChoice">Select Your Blend:</label>
         <br>
-        <select onchange={{action 'selectBlend' value='target.value'}}>
+        {{#x-select id=blendChoice action='selectBlend'}}  
           {{#each blends as |blendChoice|}}
-            <option value={{blendChoice.id}}>{{blendChoice.name}}</option>
+            {{#x-option value=blendChoice}}
+            {{blendChoice.name}}
+            {{/x-option}}
           {{/each}}
-        </select>
+        {{/x-select}}
         <br>
         <label for="quantity">Enter the Quantity:</label>
         {{input type='number' class="form-control" value=quantity id="quantity"}}

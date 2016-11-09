@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
   model(){
     return Ember.RSVP.hash({
       greens: this.store.findAll('green'),
@@ -26,23 +27,23 @@ export default Ember.Route.extend({
       });
     },
     orderBlend(params){
-        var _this = this;
-        this.store.findRecord('blend', params.id
-        ).then(function(response){
-          var blendQuantity = params.quantity;
-          var recipeArray = response.data.recipe;
-
-          for (var i = 0; i < recipeArray.length; i++) {
-            var queryLog = _this.store.query('roasted', {
-              orderBy: recipeArray[i].name
-            }).then(function(response){
-              console.log(response.content[0]._data.weight);
-              var responseArray = response.content
-              for (var j = 0; j < responseArray.length; j++) {
-
+      var blendQuantity = params.quantity;
+      var blendName = params.blendObject.data.name;
+      var blendRecipeArray = params.blendObject.data.recipe;
+          this.store.query('roasted', {
+            orderBy: 'name'
+        }).then(function(response){
+          var roastArray = response.content;
+          for (var i = 0; i < roastArray.length; i++) {
+            for (var j = 0; j < blendRecipeArray.length; j++) {
+              if (roastArray[i]._data.name === blendRecipeArray[j].name && roastArray[i]._data.weight > (blendQuantity * blendRecipeArray[j].percent)) {
+                var newRoastWeight = roastArray[i]._data.weight - (blendQuantity * blendRecipeArray[j].percent)
+                console.log(roastArray[i])
               }
-            })
+            }
+
           }
+
         })
       },
     }
