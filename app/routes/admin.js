@@ -6,7 +6,8 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       greens: this.store.findAll('green'),
       roasteds: this.store.findAll('roasted'),
-      blends: this.store.findAll('blend')
+      blends: this.store.findAll('blend'),
+      orders: this.store.findAll('order'),
     });
   },
   actions: {

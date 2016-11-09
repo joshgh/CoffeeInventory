@@ -1,22 +1,17 @@
 <h1>Roast Inventory Checker</h1>
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-6">
-        <label for="blendChoice">Select Your Blend:</label>
-        <br>
-        {{#x-select id=blendChoice action='selectBlend'}}
-          {{#each blends as |blendChoice|}}
-            {{#x-option value=blendChoice}}
-            {{blendChoice.name}}
-            {{/x-option}}
-          {{/each}}
-        {{/x-select}}
-        <br>
-        <label for="quantity">Enter the Weight (kg):</label>
-        {{input type='number' class="form-control" value=quantity id="quantity"}}
-        <button class="btn btn-success order-button" {{action 'orderBlend'}}>Check</button>
-      </div>
-    </div>
-  </div>
-</form>
+<div>
+  <form class="form-group">
+    <label for="blendChoice">Select Your Blend:</label>
+    {{#x-select class='form-control' id=blendChoice action='selectBlend'}}
+      {{#each blends as |blendChoice|}}
+        {{#x-option value=blendChoice}}
+        {{blendChoice.name}}
+        {{/x-option}}
+      {{/each}}
+    {{/x-select}}
+    <br>
+    <label for="quantity">Enter the Weight (kg):</label>
+    {{input type='number' class="form-control" value=quantity id="quantity"}}
+    <button class="btn btn-success order-button" {{action 'orderBlend'}}>Check</button>
+  </form>
+</div>

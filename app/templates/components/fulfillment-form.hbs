@@ -1,0 +1,15 @@
+<h1>Order Fulfillment</h1>
+<form>
+  <div class="form-group">
+    <label for="orderChoice">Select an Order:</label>
+    {{#x-select class='form-control' id=orderChoice action='selectOrder'}}
+      {{#each orders as |orderChoice|}}
+        {{#x-option value=orderChoice}}
+        {{orderChoice.name}}
+        {{/x-option}}
+      {{/each}}
+    {{/x-select}}
+    <br>
+    <button class="btn btn-success order-button" {{action 'fulfillOrder'}}>Fulfill Order</button>
+  </div>
+</form>
