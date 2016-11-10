@@ -9,4 +9,11 @@ export default Ember.Route.extend({
       orders: this.store.findAll('order')
     });
   },
+  actions: {
+    createOrder(params) {
+      //Create an Order!
+      var newOrder = this.store.createRecord('order', params);
+      newOrder.save();
+    },
+  }
 });

@@ -7,7 +7,7 @@
       {{/each}}
     </select>
     <br>
-    <label for="order-quantity">Amount</label>
+    <label for="order-quantity">How Many Bags (50 kg each):</label>
     {{input class="form-control" id="order-quantity" value=orderQuantity type="number" step="1"}}
     <br>
     <button class="btn btn-success btn-lg pull-right"{{action "placeOrder"}}>Place Order</button>

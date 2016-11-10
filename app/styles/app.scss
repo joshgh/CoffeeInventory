@@ -9,15 +9,18 @@
 }
 
 hr {
-  border-color: black;
+  border-color: white;
 }
 
 h1 {
   font-family: 'Coiny', cursive;
+  color: white;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
+  color: white;
+
 }
 
 h3 {
@@ -26,6 +29,7 @@ h3 {
 
 h4 {
   font-family: 'Varela Round', sans-serif;
+  color: white;
 }
 
 li {
@@ -64,8 +68,8 @@ li {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
   padding-right: 2em;
-  height: 30em;
-  background-color: #e5800d;
+  height: 40em;
+  background-color: rgba(229, 128, 13, 0.7);
 }
 
 .seperator2{
@@ -75,7 +79,7 @@ li {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
   padding-right: 2em;
-  background-color: #c0db8c;
+  background-color: rgba(192, 219, 140, 0.7);
 }
 
 .seperator3{
@@ -87,6 +91,7 @@ li {
   padding-right: 2em;
   background-color: #c0db8c;
   padding-left: 2em;
+  background-color: rgba(192, 219, 140, 0.7);
 }
 
 .centeredFields {
@@ -99,7 +104,11 @@ li {
 }
 
 body {
-  background-color: #82563b;
+  background-image: url(http://coffeemachineeu.com/uploads/page/2014_09/coffee-roaster.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btmMarg {

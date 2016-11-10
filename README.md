@@ -1,7 +1,6 @@
-# Coffee-inventory
+# Coffee Inventory
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This application is designed to allow a coffee roastery to manage their inventory from the ordering of green coffee beans through the fulfillment of orders.
 
 ## Prerequisites
 
@@ -25,6 +24,15 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+## Specifications
+
+* app should allow a user to add to their inventory of green coffee beans
+* app should allow a user to create a combination of green beans and roast level
+* app should allow a user to "roast" beans moving them from the green inventory to the roasted inventory
+* app should allow a user to create a blend to sell from the roasted beans available
+* app should allow a user to create an order for a specific amount of a blend
+* app should allow a user to fulfill orders, removing inventory from the roasted beans
+
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
@@ -39,15 +47,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Development Team
+This app was created as the JavaScript class group project at Epicodus by:
+* Josh Huffman - j.m.huffman@gmail.com
+* Tim Bourgault - tim.bourgault@gmail.com
+* Chance Neff - crneff84@gmail.com
+* Matthew Brandenburg - matt.bran87@gmail.com
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+### License
+Licensed under the MIT License

@@ -5,23 +5,25 @@
     </div>
     <div class="col-md-1">
     </div>
-    <div class="col-md-4 centeredFields boldList">
+    <div class="col-md-4 centeredFields boldList seperator2">
       <h1>Our Current Selection Of Roasts:</h1>
       <hr>
       <div class="col-md-8">
         {{#each model.roasteds as |roast|}}
           <p>{{roast.name}}</p>
         {{/each}}
+        <hr>
       </div>
       <div class="col-md-4">
         {{#each model.roasteds as |roast|}}
-          <p>{{roast.weight}}</p>
+          <p>{{roast.weight}} kg</p>
         {{/each}}
+        <hr>
       </div>
     </div>
     <div class="col-md-1">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 seperator">
       {{roast-beans roasteds=model.roasteds roastBeans="roastBeans"}}
     </div>
   </div>

@@ -47,7 +47,7 @@ export default Ember.Route.extend({
               }
             }
           }
-        })
+        });
       },
       createOrder(params) {
         //Create an Order!
@@ -57,10 +57,7 @@ export default Ember.Route.extend({
       fulfillOrder(params) {
         //Order Fulfillment
         var paramBlendID = params.orderObject.data.blendID;
-        var paramBlendName = params.orderObject.data.blendName;
         var paramsWeight = params.orderObject.data.weight;
-        var paramsCustomerName = params.orderObject.data.customerName;
-        var paramsFulfilled = params.orderObject.data.fulfilled;
         var paramsID = params.orderObject.id;
         var _this = this;
         var fulfilledSetTrue = function(paramsID) {
@@ -69,8 +66,8 @@ export default Ember.Route.extend({
           response.set('fulfilled', true);
           response.save();
           console.log(response.get('fulfilled'));
-        })
-        }
+        });
+      };
         fulfilledSetTrue(paramsID);
         this.store.findRecord('blend', paramBlendID
       ).then(function(response){
@@ -78,16 +75,11 @@ export default Ember.Route.extend({
           var ingredientPercent = ingredient.percent;
           _this.store.findRecord('roasted', ingredient.roastID
         ).then(function(response){
-          response.set('weight', response.get('weight') - (paramsWeight * ingredientPercent));
-
+          response.set('weight', response.get('weight') - (paramsWeight * ingredientPercent).toFixed(2));
           response.save();
-          })
-        })
-        })
-      },
-      setTrueSendUp(params) {
-        var paramsOrderID = params.id;
-        console.log(params);
+        });
+      });
+    });
       },
       roastBeans(id) {
         let _this = this;

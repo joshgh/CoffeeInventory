@@ -4,7 +4,7 @@
 <h5>Ingredients</h5>
 <ul>
   {{#each blend.recipe as |roast|}}
-    <li>{{roast.name}} - {{roast.percent}}</li>
+    <li>{{roast.name}} - {{percent roast.percent}}</li>
   {{/each}}
 </ul>
 <hr>
