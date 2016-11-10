@@ -5,8 +5,10 @@
     </div>
     <div class="col-md-6 seperator2">
       {{#each model.orders as |order|}}
-        {{order-list-tile order=order}}
-        <hr>
+        {{#unless order.fulfilled}}
+          {{order-list-tile order=order}}
+          <hr>
+        {{/unless}}  
       {{/each}}
     </div>
   </div>
