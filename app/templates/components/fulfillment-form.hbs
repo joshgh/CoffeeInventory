@@ -4,9 +4,11 @@
     <label for="orderChoice">Select an Order:</label>
     {{#x-select class='form-control' id=orderChoice action='selectOrder'}}
       {{#each orders as |orderChoice|}}
-        {{#x-option value=orderChoice}}
-        {{orderChoice.customerName}}
-        {{/x-option}}
+        {{#unless orderChoice.fulfilled}}
+          {{#x-option value=orderChoice}}
+          {{orderChoice.customerName}}
+          {{/x-option}}
+        {{/unless}}
       {{/each}}
     {{/x-select}}
     <div>
