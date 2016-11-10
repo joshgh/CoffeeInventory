@@ -8,6 +8,10 @@
   }
 }
 
+label {
+  color: white;
+}
+
 hr {
   border-color: white;
 }
@@ -25,10 +29,15 @@ h2 {
 
 h3 {
   font-family: 'Rubik', sans-serif;
+  color: white;
 }
 
 h4 {
   font-family: 'Varela Round', sans-serif;
+  color: white;
+}
+
+h5 {
   color: white;
 }
 
@@ -69,7 +78,7 @@ li {
 	-webkit-border-radius: 10px;
   padding-right: 2em;
   height: 40em;
-  background-color: rgba(229, 128, 13, 0.7);
+  background-color: rgba(96, 64, 32, 0.7);
 }
 
 .seperator2{
