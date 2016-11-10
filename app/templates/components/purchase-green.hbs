@@ -1,5 +1,5 @@
 <div>
-  <form class="form-group">
+  <form class="form-group topMarg">
     <label for="bean-id">Desired Bean:</label>
     <select class="form-control" value=selectedBean id="bean-id" onchange={{action 'selectBean' value='target.value'}}>
       {{#each greens as |green|}}
@@ -10,6 +10,6 @@
     <label for="order-quantity">Amount</label>
     {{input class="form-control" id="order-quantity" value=orderQuantity type="number" step="1"}}
     <br>
-    <button class="btn btn-info btn-md"{{action "placeOrder"}}>Place Order</button>
+    <button class="btn btn-success btn-lg pull-right"{{action "placeOrder"}}>Place Order</button>
   </form>
 </div>

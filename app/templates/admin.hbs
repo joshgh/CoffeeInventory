@@ -1,17 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      {{create-order blends=model.blends createOrder='createOrder'}}
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-3 seperator">
       {{order-form blends=model.blends orderBlend='orderBlend'}}
     </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-3 seperator topMarg2">
+      {{roast-beans roasteds=model.roasteds roastBeans='roastBeans'}}
+    </div>
+    <div class="col-md-3 form-group seperator">
+      {{fulfillment-form orders=model.orders fulfillOrder = 'fulfillOrder'}}
+    </div>
+    <div class="col-md-3 form-group seperator">
       <h1>Order More Green Beans!</h1>
       {{purchase-green greens=model.greens placeOrder="placeOrder"}}
     </div>
-    <div class="col-md-3 form-group">
-      {{fulfillment-form orders=model.orders fulfillOrder = 'fulfillOrder'}}
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6 seperator2">
+        <h1 class="centered">Current Green Coffee Warehouse Inventory:</h1>
+        <hr>
+        <div class="centered">
+          {{'green-inventory-list' greens=model.greens}}
+          <hr>
+        </div>
+      </div>
+      <div class="col-md-3">
+      </div>
     </div>
   </div>
 </div>

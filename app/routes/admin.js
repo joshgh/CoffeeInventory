@@ -74,5 +74,16 @@ export default Ember.Route.extend({
         })
         })
       },
+      roastBeans(id) {
+        let _this = this;
+        this.store.findRecord('roasted', id).then(function(roast) {
+          roast.set('weight', roast.get('weight') + 50);
+          roast.save();
+          return _this.store.findRecord('green', roast.get('greenID'));
+        }).then(function(green) {
+          green.set('weight', green.get('weight') - 50);
+          green.save();
+        });
+      }
     }
 });

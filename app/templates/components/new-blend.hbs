@@ -1,4 +1,6 @@
-<form class="form-group">
+
+<form class="form-group seperator3">
+  <h1>Create a New Blend!</h1>
   <label for="blend-name">Name:</label>
   {{input class="form-control" id="blend-name" value=blendName}}
   <label for="blend-description">Description:</label>
@@ -14,6 +16,7 @@
   <label for="percent1">Decimal Fraction:</label>
   {{input class="form-control" value=percent1 id="percent1"}}
   <br>
+  <hr>
   <h4>~Second Roast:</h4>
   {{#x-select class="form-control" action="selectRoast2" as |xs|}}
     {{#each roasteds as |roast|}}
@@ -23,6 +26,7 @@
   <label for="percent2">Decimal Fraction:</label>
   {{input class="form-control" value=percent2 id="percent2"}}
   <br>
+  <hr>
   <h4>~Third Roast:</h4>
   {{#x-select class="form-control" action="selectRoast3" as |xs|}}
     {{#each roasteds as |roast|}}
@@ -32,6 +36,7 @@
   <label for="percent3">Decimal Fraction:</label>
   {{input class="form-control" value=percent3 id="percent3"}}
   <br>
+  <hr>
   <h4>~Fourth Roast:</h4>
   {{#x-select class="form-control" action="selectRoast4" as |xs|}}
     {{#each roasteds as |roast|}}
@@ -41,6 +46,7 @@
   <label for="percent4">Decimal Fraction:</label>
   {{input class="form-control" value=percent4 id="percent4"}}
   <br>
+  <hr>
   <h4>Fifth Roast:</h4>
   {{#x-select class="form-control" action="selectRoast5" as |xs|}}
     {{#each roasteds as |roast|}}
@@ -50,6 +56,7 @@
   <label for="percent5">Decimal Fraction:</label>
   {{input class="form-control" value=percent5 id="percent5"}}
   <br>
+  <hr>
   <h4>Sixth Roast:</h4>
   {{#x-select class="form-control" action="selectRoast6" as |xs|}}
     {{#each roasteds as |roast|}}
@@ -58,10 +65,6 @@
   {{/x-select}}
   <label for="percent6">Decimal Fraction:</label>
   {{input class="form-control" value=percent6 id="percent6"}}
-
-
-
-  <button class="btn btn-success btn-lg" {{action "saveBlend"}}>Save</button>
-
-
+  <hr>
+  <button class="btn btmMarg btn-success btn-lg" {{action "saveBlend"}}>Save</button>
 </form>

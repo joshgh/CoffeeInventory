@@ -1,15 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-
+    <div class="col-md-6 seperator">
+      {{create-order blends=model.blends createOrder='createOrder'}}
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6 seperator2">
       {{#each model.orders as |order|}}
         {{order-list-tile order=order}}
+        <hr>
       {{/each}}
-    </div>
-    <div class="col-md-4">
-
     </div>
   </div>
 </div>

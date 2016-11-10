@@ -1,6 +1,6 @@
 <h1>Roast Inventory Checker</h1>
 <div>
-  <form class="form-group">
+  <form class="form-group topMarg">
     <label for="blendChoice">Select Your Blend:</label>
     {{#x-select class='form-control' id=blendChoice action='selectBlend'}}
       {{#each blends as |blendChoice|}}
@@ -12,6 +12,6 @@
     <br>
     <label for="quantity">Enter the Weight (kg):</label>
     {{input type='number' class="form-control" value=quantity id="quantity"}}
-    <button class="btn btn-success order-button" {{action 'orderBlend'}}>Check</button>
+    <button class="btn btn-warning btn-lg order-button pull-right" {{action 'orderBlend'}}>Check</button>
   </form>
 </div>

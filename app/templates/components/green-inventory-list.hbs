@@ -1,7 +1,18 @@
 <div class="green-inventory-list">
   <ul>
     {{#each greens as |green|}}
-      <li class="boldList">{{green.name}} - {{green.weight}} kg</li>
+    <div class="row boldList">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <h3>{{green.name}}</h3>
+      </div>
+      <div class="col-md-3">
+        <h3>{{green.weight}} kg</h3>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
     {{/each}}
   </ul>
 </div>

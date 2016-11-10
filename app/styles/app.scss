@@ -8,8 +8,12 @@
   }
 }
 
-h1 {
+hr {
+  border-color: black;
+}
 
+h1 {
+  font-family: 'Coiny', cursive;
 }
 
 h2 {
@@ -26,6 +30,63 @@ h4 {
 
 li {
   list-style: none;
+  font-family: 'Baloo Paaji', cursive
+}
+
+.topMarg {
+  margin-top: 2.1em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.selectFont {
+  font-family: 'Modak', cursive;
+}
+
+.topMarg2 {
+  margin-top: 4.7em;
+}
+
+#roastTopMarg {
+  margin-top: 4em;
+}
+
+.topMarg3 {
+  margin-top: 6.6em;
+}
+
+.seperator{
+	margin-top:10px;
+	border: black medium solid;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+  padding-right: 2em;
+  height: 30em;
+  background-color: #e5800d;
+}
+
+.seperator2{
+	margin-top:10px;
+	border: black medium solid;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+  padding-right: 2em;
+  background-color: #c0db8c;
+}
+
+.seperator3{
+	margin-top:10px;
+	border: black medium solid;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+  padding-right: 2em;
+  background-color: #c0db8c;
+  padding-left: 2em;
 }
 
 .centeredFields {
@@ -38,7 +99,7 @@ li {
 }
 
 body {
-  background-color: #e5800d;
+  background-color: #82563b;
 }
 
 .btmMarg {
