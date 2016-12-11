@@ -35,18 +35,20 @@ export default Ember.Route.extend({
         }).then(function(response){
           _this.set('roastedOrderArray', []);
           var roastArray = response.content;
+          var roastMessage = "";
           for (var i = 0; i < roastArray.length; i++) {
             for (var j = 0; j < blendRecipeArray.length; j++) {
               if (roastArray[i]._data.name === blendRecipeArray[j].name && roastArray[i]._data.weight < (blendQuantity * blendRecipeArray[j].percent)) {
                 var newRoastWeight = (blendQuantity * blendRecipeArray[j].percent) - roastArray[i]._data.weight;
                 _this.get('roastedOrderArray').pushObject([roastArray[i]._data.name, newRoastWeight]);
-                alert("You need to roast " + newRoastWeight + " kg of " + roastArray[i]._data.name);
+                roastMessage += "You need to roast " + newRoastWeight + " kg of " + roastArray[i]._data.name + "\n";
               }
               if (roastArray[i]._data.name === blendRecipeArray[j].name && roastArray[i]._data.weight > (blendQuantity * blendRecipeArray[j].percent)) {
-                alert("You have enough of " + roastArray[i]._data.name + " to complete this order. Continue to order-fulfillment form.");
+                roastMessage += "You have enough of " + roastArray[i]._data.name + " to complete this order.\n";
               }
             }
           }
+          alert(roastMessage);
         });
       },
       createOrder(params) {
