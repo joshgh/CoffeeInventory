@@ -18,10 +18,10 @@ module.exports = function(environment) {
 
     },
     firebase: {
-      apiKey: "AIzaSyA8OTVa_DW4UWc4diHMmzBxd76UNWpUecc",
-      authDomain: "coffee-inventory.firebaseapp.com",
-      databaseURL: "https://coffee-inventory.firebaseio.com",
-      storageBucket: "coffee-inventory.appspot.com"
+      apiKey: "AIzaSyAaFIzVezk2E5RX-M3i_3O3OxvO2g3ruu0",
+      authDomain: "coffeeinventory-fe0e4.firebaseapp.com",
+      databaseURL: "https://coffeeinventory-fe0e4.firebaseio.com",
+      storageBucket: "coffeeinventory-fe0e4.appspot.com",
     },
 
     APP: {
