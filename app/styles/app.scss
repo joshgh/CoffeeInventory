@@ -130,9 +130,12 @@ body {
   margin-top: 0;
 }
 
+a.centeredFields {
+  display: block;
+}
 
 .order-button {
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 label {

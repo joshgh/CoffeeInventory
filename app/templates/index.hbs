@@ -1,19 +1,10 @@
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-4">
-      </div>
-      <div class="col-sm-4 btmMarg">
-        <h1 class="centeredFields">Log In</h1>
-        <label class="login" for="logIn">Enter Username:</label>
-        {{input type='string' class="form-control"}}
-        <br>
-        <label class="login" for="logIn">Enter Password:</label>
-        {{input type='string' class="form-control"}}
-        {{#link-to 'admin'}}<button class="btn btn-success order-button">Enter Admin Area</button>{{/link-to}}
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
+<div class="row">
+  <div class="col-sm-4">
   </div>
-</form>
+  <div class="col-sm-4 btmMarg">
+    <h1 class="centeredFields">Welcome to the Coffee Inventory System!</h1>
+    {{#link-to 'admin' class='centeredFields'}}<button class="btn btn-success order-button">Enter Admin Area</button>{{/link-to}}
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
