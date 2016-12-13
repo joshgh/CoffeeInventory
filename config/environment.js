@@ -50,8 +50,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = null;
-	  ENV.locationType = 'hash';
+    // ENV.baseURL = null;
+    ENV.rootURL = '/coffee-inventory/'
   }
 
   return ENV;
