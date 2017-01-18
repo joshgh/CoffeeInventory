@@ -1,47 +1,39 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>JavInva</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          {{#link-to "index" class="navbar-brand"}}JavInva{{/link-to}}
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"></a></li>
-                <li>{{#link-to "admin"}}Administration{{/link-to}}</li>
-                <li role="separator" class="divider"></li>
-                <li>{{#link-to "blends"}}Create a New Blend{{/link-to}}</li>
-                <li role="separator" class="divider"></li>
-                <li>{{#link-to "roasts"}}Create A New Roast{{/link-to}}</li>
-                <li role="separator" class="divider"></li>
-                <li>{{#link-to "orders"}}Current Orders{{/link-to}}</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="jumbotron">
-      <img src="img/coffee-beans.png" alt="coffee beans in the shape of a coffee mug with steam rising up off of it" /><h1 id="logo">JavInva</h1>
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to "index" class="navbar-brand"}}JavInva{{/link-to}}
     </div>
-    <hr>
-    {{outlet}}
-  </body>
-  <footer>
-    <hr>
-    <h4>Copyright 2016 JavInva LLC.</h4>
-  </footer>
-</html>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"></a></li>
+            <li>{{#link-to "admin"}}Administration{{/link-to}}</li>
+            <li role="separator" class="divider"></li>
+            <li>{{#link-to "blends"}}Create a New Blend{{/link-to}}</li>
+            <li role="separator" class="divider"></li>
+            <li>{{#link-to "roasts"}}Create A New Roast{{/link-to}}</li>
+            <li role="separator" class="divider"></li>
+            <li>{{#link-to "orders"}}Current Orders{{/link-to}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron">
+  <img src="img/coffee-beans.png" alt="coffee beans in the shape of a coffee mug with steam rising up off of it" /><h1 id="logo">JavInva</h1>
+</div>
+<hr>
+{{outlet}}
+<footer>
+<hr>
+<h4>Copyright 2016 JavInva LLC.</h4>
+</footer>
